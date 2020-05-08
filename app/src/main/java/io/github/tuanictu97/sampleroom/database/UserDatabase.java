@@ -17,7 +17,7 @@ import io.github.tuanictu97.sampleroom.entities.User;
 public abstract class UserDatabase extends RoomDatabase {
     public abstract UserDao userDao();
 
-    public static volatile UserDatabase INSTANCE;
+    private static volatile UserDatabase INSTANCE;
     private static final int NUMBER_OF_THREADS = 4;
 
     public static final ExecutorService databaseWriteExecutor =
